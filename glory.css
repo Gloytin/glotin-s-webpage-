@@ -5,12 +5,13 @@
 
 body{
     background-image: url(images/background.jpg);
+    
     background-position: center;
     background-size: cover;
     position: relative;
     height: 150vh;  
     width: 100%;    
-    background-blend-mode: darken;
+    background-blend-mode: ;
 }
 
 .logo{
@@ -21,6 +22,7 @@ body{
     font-size: 20px;
     padding-left: 11px;
     position: relative;
+    animation: logo 2s ease-in-out 2s infinite alternate;
     
 }
 
@@ -200,6 +202,22 @@ body{
     padding: 15px;
     
 }
+
+@keyframes logo {
+    100%{transform: rotate(360deg); background: black;}
+}
+
+.popup{
+    position: absolute;
+    font-family: monaco;
+    font-size: 0px;
+    animation: popup 2.5s ease-in-out 1s 1 normal;
+}
+
+@keyframes popup {
+    50%{ color: orange; transform: translate(350px,-200px); font-family: cursive; font-size: 35px;}
+    100%{display: none;}
+    
 
 
 
